@@ -1,0 +1,8 @@
+<div class="hero-unit">
+	<h1>welcome to roqbox.</h1>
+	<%= form_for @profile do %>
+		<p>roqbox.net/<%= text_field_tag(:slug,"",:class=>"span4") %></p>
+		<p><%= submit_tag("create profile",:class=>"btn btn-primary") %></p>
+	<% end %>
+</div>
+

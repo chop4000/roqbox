@@ -1,0 +1,7 @@
+<div class="hero-unit">
+	<h1>create a new box.</h1>
+	<%= form_for [@profile, @box] do |f| %>
+		 <%= f.text_area :text, :rows => 5, :class => "span7" %>
+  		 <%= f.submit "Create" %>
+	<% end %>
+</div>

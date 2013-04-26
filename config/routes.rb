@@ -1,4 +1,23 @@
 Roqbox::Application.routes.draw do
+
+  post '/' => 'home#create'
+
+  root :to => "home#index"
+
+  get 'thecoolband' => 'home#thecoolband'
+  get 'theradband' => 'home#theradband'
+  get 'sweetband' => 'home#sweetband'
+
+  # When the router sees :id, whatever is passed through
+  # the URL, place it in params[:id] -- you could use :pizza but it's
+  # just Rails convention to use :id
+  #get ':id' => 'home#show'
+
+  resources :profiles, :only => [ :show ], :path => ''
+  resources :profiles do
+    resources :boxes
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
