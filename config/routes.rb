@@ -1,5 +1,9 @@
 Roqbox::Application.routes.draw do
 
+  devise_for :users
+  get "users/profile"
+
+
   post '/' => 'home#create'
 
   root :to => "home#index"
@@ -7,6 +11,9 @@ Roqbox::Application.routes.draw do
   get 'thecoolband' => 'home#thecoolband'
   get 'theradband' => 'home#theradband'
   get 'sweetband' => 'home#sweetband'
+
+  match 'user/:id' => 'users#profile', :as => :user
+
 
   # When the router sees :id, whatever is passed through
   # the URL, place it in params[:id] -- you could use :pizza but it's
