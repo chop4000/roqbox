@@ -17,13 +17,15 @@
 	<div style="position: absolute; top: 10px; right: 15px;">
 		<% if user_signed_in? %>
 
-		<button class="btn">
+		<span class="nav_text">
 			<%= link_to "Profile", current_user %>
-		</button>
+		</span>
 
-		<button class="btn">
+		<span style="color:#999999;">|</span>
+
+		<span class="nav_text">
 			<%= link_to "Logout", destroy_user_session_path, method: :delete %>
-		</button>
+		</span>
 
 		<% else %>
 
