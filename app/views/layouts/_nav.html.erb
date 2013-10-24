@@ -21,7 +21,7 @@
 			<%= link_to "Profile", current_user %>
 		</span>
 
-		<span style="color:#999999;">|</span>
+		<span style="color:#999999;">&nbsp;|&nbsp;</span>
 
 		<span class="nav_text">
 			<%= link_to "Logout", destroy_user_session_path, method: :delete %>
@@ -35,7 +35,9 @@
 		<span class="nav_text">
 			<%= link_to "Signup", new_user_registration_path %>
 		</span>
-		
+
+		<span style="color:#999999;">&nbsp;|&nbsp;</span>
+
 		<span class="nav_text">
 			<%= link_to "Login", new_user_session_path %>
 		</span>
