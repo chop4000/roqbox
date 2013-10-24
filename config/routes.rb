@@ -20,6 +20,9 @@ Roqbox::Application.routes.draw do
   # just Rails convention to use :id
   #get ':id' => 'home#show'
 
+
+  get 'profiles' => 'profiles#index'
+
   resources :profiles, :only => [ :show ], :path => ''
   resources :profiles do
     resources :boxes

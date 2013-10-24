@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131003031730) do
+ActiveRecord::Schema.define(:version => 20131016041832) do
 
   create_table "boxes", :force => true do |t|
     t.integer  "profile_id"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(:version => 20131003031730) do
     t.string   "slug"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "creator"
+  end
+
+  add_index "profiles", ["creator"], :name => "index_profiles_on_creator"
+
+  create_table "profiles_users", :id => false, :force => true do |t|
+    t.integer "profile_id"
+    t.integer "user_id"
   end
 
   create_table "users", :force => true do |t|

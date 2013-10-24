@@ -3,6 +3,11 @@ class HomeController < ApplicationController
 	def index
 
 		@profile = Profile.new
+		if signed_in?
+			@user = current_user
+
+			@profiles = Profile.includes(:users).where('users.id' => "#{current_user.id}")
+		end
 
 	end
 

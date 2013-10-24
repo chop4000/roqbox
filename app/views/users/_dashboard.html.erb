@@ -1,0 +1,11 @@
+<div class="hero-unit">
+	<h1>Hey, <%= @user.email %></h1>
+	<%= form_for @profile do %>
+		<p>roqbox.net/<%= text_field_tag(:slug,"",:class=>"span4") %></p>
+		<p><%= submit_tag("create new profile",:class=>"btn btn-primary") %></p>
+	<% end %>
+</div>
+
+<div class="tool_box">
+	<%= render :partial => 'shared/dashboard_profile', :collection => @profiles, :as => :profile %>
+</div>
