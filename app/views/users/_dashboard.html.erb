@@ -7,5 +7,7 @@
 </div>
 
 <div class="tool_box">
-	<%= render :partial => 'shared/dashboard_profile', :collection => @profiles, :as => :profile %>
+	<% @user.created_profiles.each do |created_profile| %>
+	<%= render :partial => 'shared/dashboard_profile', :object => created_profile, :as => :profile %>
+	<% end %>
 </div>
