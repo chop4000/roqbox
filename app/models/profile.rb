@@ -4,7 +4,7 @@ class Profile < ActiveRecord::Base
 
   validates :slug,
   	:presence => true,
-  	:format => { :with => /^[0-9a-zA-Z\d\s]*$/ },
+  	:format => { :with => /\A[-0-9a-z_]*\Z/i },
   	:uniqueness => true
 
   has_and_belongs_to_many :users

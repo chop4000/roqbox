@@ -1,11 +1,15 @@
 @import 'bootstrap';
 @import 'bootstrap-responsive';
 
-a {
+#main_body {
+	padding-top : 80px;
+}
+
+#nav_bar a {
 	color: #ffffff;
 }
 
-a:hover {
+#nav_bar a:hover {
 	color: #331189;
 	text-shadow: 2px 2px #ffffff;
 	text-decoration: none;
