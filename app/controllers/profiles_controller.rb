@@ -5,18 +5,18 @@ class ProfilesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @pups }
+      format.json { render json: @profiles }
     end
   end
 
   def new
   	@user = current_user
-    @profile = @user.pups.build(params[:pup])
+    @profile = @user.profiles.build(params[:profile])
     @profile.creator = @user
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @pup }
+      format.json { render json: @profile }
     end
   end
 

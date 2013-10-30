@@ -6,7 +6,7 @@ class HomeController < ApplicationController
 		if signed_in?
 			@user = current_user
 
-			@profiles = Profile.includes(:users).where('users.id' => "#{current_user.id}")
+			@profiles = Profile.where("creator = ?", @user.id)
 		end
 
 	end
