@@ -1,5 +1,6 @@
 @import 'bootstrap';
 @import 'bootstrap-responsive';
+@import 'roqbox_logo.css.scss';
 
 a {
 	color: #ffffff;
@@ -22,61 +23,8 @@ a:hover {
 }
 
 .arrow-left {
-	width: 0; 
+	width: 0;
 	height: 0; 
-}
-
-#roqbox_container {
-	position: absolute;
-	background-color: #ffffff;
-	left: 0px;
-	top: 0px;
-	width: 32px;
-	height: 32px;
-	border: 8px solid #331189;
-}
-
-#roqbox_1 {
-	position: relative;
-	background-color: #331189;
-	left: 8px;
-	top: 16px;
-	width: 8px;
-	height: 16px;	
-}
-
-#roqbox_2 {
-	position: relative;
-	left: 8px;
-	top: -8px;
-	border-top: 8px solid transparent;
-	border-right: 8px solid #331189; 
-}
-
-#roqbox_3 {
-	position: relative;
-	left: 8px;
-	top: -25px;
-	border-top: 8px solid #331189;
-	border-right: 8px solid transparent; 
-}
-
-#roqbox_4 {
-	position: absolute;
-	background-color: #331189;
-	left: 16px;
-	top: 8px;
-	width: 8px;
-	height: 25px;	
-}
-
-#roqbox_5 {
-	position: absolute;
-	background-color: #331189;
-	left: 24px;
-	top: 0px;
-	width: 8px;
-	height: 40px;	
 }
 
 .btn {
