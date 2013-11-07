@@ -28,4 +28,8 @@ class HomeController < ApplicationController
 		logger.info "Terminal/server output test"
 	end
 
+	def layout_designer
+		logger.info "this is where one would expect a terminal output"
+	end
+
 end

@@ -5,12 +5,12 @@
 
 	
 	<a href="/">
-		<div id="roqbox_container">
-			<div id="roqbox_1"></div>
-			<div id="roqbox_2" class="arrow-left"></div>
-			<div id="roqbox_3" class="arrow-left"></div>
-			<div id="roqbox_4"></div>
-			<div id="roqbox_5"></div>
+		<div id="roqbox_container_r">
+			<div id="roqbox_r_1"></div>
+			<div id="roqbox_r_2" class="arrow-left"></div>
+			<div id="roqbox_r_3" class="arrow-left"></div>
+			<div id="roqbox_r_4"></div>
+			<div id="roqbox_r_5"></div>
 		</div> <!-- test123 -->
 	</a>
 
@@ -21,7 +21,7 @@
 			<%= link_to "Profile", current_user %>
 		</span>
 
-		<span style="color:#999999;">&nbsp;|&nbsp;</span>
+		<span style="color:#999999;">|</span>
 
 		<span class="nav_text">
 			<%= link_to "Logout", destroy_user_session_path, method: :delete %>
@@ -36,7 +36,7 @@
 			<%= link_to "Signup", new_user_registration_path %>
 		</span>
 
-		<span style="color:#999999;">&nbsp;|&nbsp;</span>
+		<span style="color:#999999;">|</span>
 
 		<span class="nav_text">
 			<%= link_to "Login", new_user_session_path %>
